@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico"/>
+    <title>登录 | AppFuse</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
+    <meta name="heading" content="登录"/>
+    <meta name="menu" content="Login"/>
+</head>
+<body class="login">
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="/">AppFuse</a>
+
+            <ul class="nav">
+
+                <li class="active">
+                    <a href="/login">登录</a>
+                </li>
+
+            </ul>
+
+            <div id="switchLocale"><a href="/?locale=en">
+                AppFuse in English</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span5">
+            <form method="post" id="loginForm" action="/j_security_check"
+                  onsubmit="saveUsername(this);return validateForm(this)" class="form-horizontal">
+
+
+                <fieldset class="control-group">
+                    <label for="j_username" class="required control-label">
+                        用户名 <span class="required">*</span>
+                    </label>
+
+                    <div class="controls">
+                        <input type="text" name="j_username" id="j_username" tabindex="1"/>
+                    </div>
+                </fieldset>
+
+                <fieldset class="control-group">
+                    <label for="j_password" class="required control-label">
+                        密码 <span class="required">*</span>
+                    </label>
+
+                    <div class="controls">
+                        <input type="password" name="j_password" id="j_password" tabindex="2"/>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" name="_spring_security_remember_me" id="rememberMe" tabindex="3"/>
+                            让系统记住我
+                        </label>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="form-actions">
+                    <input type="submit" class="btn btn-primary" name="login" value="登录"
+                           tabindex="4"/>
+                </fieldset>
+            </form>
+
+
+        </div>
+        <div class="span3">
+            <p>
+                不是注册用户? <a href="/signup">申请</a> 一个帐号。
+            </p>
+
+            <p>忘记了密码?  让系统将 <a href="?" onmouseover="window.status='系统发送密码提示。'; return true" onmouseout="window.status=''; return true" title="系统发送密码提示。" onclick="passwordHint(); return false">密码提示信息已e-mail形式发送给您</a>。</p>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+        <span class="left">Version 1.0-SNAPSHOT
+        </span>
+        <span class="right">
+            &copy; 2012 <a href="http://raibledesigns.com">Your Company Here</a>
+        </span>
+</div>
+
+<script type="text/javascript" src="/scripts/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/scripts/lib/bootstrap.js"></script>
+<script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
+<script type="text/javascript" src="/scripts/script.js"></script>
+<script type="text/javascript">
+    if ($.cookie("username") != null) {
+        $("#j_username").val($.cookie("username"));
+        $("#j_password").focus();
+    } else {
+        $("#j_username").focus();
+    }
+
+    function saveUsername(theForm) {
+        $.cookie("username",theForm.j_username.value, { expires: 30, path: "/"});
+    }
+
+    function validateForm(form) {
+        var valid = validateRequired(form);
+        if (valid == false) {
+            $(".control-group").addClass('error');
+        }
+        return valid;
+    }
+
+    function passwordHint() {
+        if ($("#j_username").val().length == 0) {
+            alert("用户名 is a required field.");
+            $("#j_username").focus();
+        } else {
+            location.href="/passwordHint?username=" + $("j_username").value;
+        }
+    }
+
+    function required () {
+        this.aa = new Array("j_username", "用户名 is a required field.", new Function ("varName", " return this[varName];"));
+        this.ab = new Array("j_password", "密码 is a required field.", new Function ("varName", " return this[varName];"));
+    }
+</script>
+</body>
+</html>

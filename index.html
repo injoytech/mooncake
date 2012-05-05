@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>首页 | Mooncake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="styles/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet"/>
+    <link href="styles/docs.css" rel="stylesheet">
+    <style>
+        .char1,
+        .word1,
+        .line1 { color: red; }
+        .char2,
+        .word2,
+        .line2 { color: orange; }
+        .char3,
+        .word3,
+        .line3 { color: yellow; }
+        .char4,
+        .line4 { color: blue; }
+        .char5 { color: green; }
+        .char6 { color: indigo; }
+        .char7 { color: violet; }
+    </style>
+    <link href="styles/lib/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a id="brand" class="brand" href="./index.html">Mooncake</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="index.html" rel="tooltip" title="专业的保险搜索引擎">首页</a></li>
+                    <li><a href="html/wiki.html" rel="tooltip" title="丰富的保险知识">保险知识</a></li>
+                    <li><a href="html/lifeproduct.html" rel="tooltip" title="专业的保险产品介绍" >保险产品</a></li>
+                    <li><a href="html/showcase.html" rel="tooltip" title="精彩案例分享">精彩案例</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="html/news.html" rel="tooltip" title="最新的保险新闻">保险新闻</a></li>
+                    <li><a href="html/aboutus.html" rel="tooltip" title="关于我们">关于我们</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li class=""><a href="/login" id="login"></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<!-- sample modal content -->
+<div class="modal hide fade" id="myModal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>快速查找适合您的保险产品</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">您的性别：</label>
+                    <div class="controls">
+                        <label class="radio inline">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            男士
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            女士
+                        </label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">出生日期：</label>
+                    <div class="controls">
+                        <input type="text" class="span2" placeholder="eg. 1980-08-31">
+                        <p class="help-block">格式：YYYY-MM-DD</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="select01">我想投保：</label>
+                    <div class="controls">
+                        <select id="select01" class="span2">
+                            <option>保障类寿险</option>
+                            <option>意外险</option>
+                            <option>健康医疗保险 </option>
+                            <option>养老保险 </option>
+                            <option>少儿保险</option>
+                            <option>女性保险</option>
+                            <option>投资理财保险 </option>
+                            <option>旅游&签证保险 </option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">关闭</a>
+        <a href="#" class="btn btn-primary">提交</a>
+    </div>
+</div>
+
+<div class="container">
+    <!--<input type="text" name="username" id="username"/> <br/>-->
+    <!--<input type="checkbox" name="check" id="check"/>记住用户名-->
+    <!-- Masthead
+   ================================================== -->
+    <header class="jumbotron masthead">
+        <div class="inner">
+            <h1>您身边的保险专家</h1>
+            <p>Simple and flexible HTML,CSS,and Javascript for popular user interface components and interactions.</p>
+            <p class="download-info">
+                <a href="#myModal" class="btn btn-primary btn-large" data-toggle="modal">适合自己的保险</a>
+                <a href="#" class="btn btn-large disabled">了解保险知识 <small>(coming soon)</small></a>
+            </p>
+        </div>
+
+        <div class="bs-links">
+            <ul class="quick-links">
+                <li><a href="/signup">免费注册</a> 获得更专业的保险服务！</li>
+            </ul>
+            <div class="alert alert-info">
+                <a class="close" data-dismiss="alert">×</a>
+                <strong>我们每天都在进步！</strong> Best check yo self, you're not looking too good.
+            </div>
+        </div>
+
+    </header>
+
+    <hr class="soften">
+
+    <div class="marketing">
+        <h1>热销险种推荐</h1>
+        <p class="marketing-byline">什么样的保险更适合自己？更多专业介绍请见<a href="html/lifeproduct.html" rel="tooltip" title="专业的保险产品介绍">保险产品</a></p>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="span4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="span4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="span4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div><!-- /.marketing -->
+
+    <!-- Footer
+   ================================================== -->
+    <footer class="footer">
+        <p>&copy; Company 2012</p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+    </footer>
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="scripts/lib/jquery-1.7.1.min.js"></script>
+<script src="scripts/lib/plugins/bootstrap-transition.js"></script>
+<script src="scripts/lib/plugins/bootstrap-alert.js"></script>
+<script src="scripts/lib/plugins/bootstrap-modal.js"></script>
+<script src="scripts/lib/plugins/bootstrap-dropdown.js"></script>
+<script src="scripts/lib/plugins/bootstrap-scrollspy.js"></script>
+<script src="scripts/lib/plugins/bootstrap-tab.js"></script>
+<script src="scripts/lib/plugins/bootstrap-tooltip.js"></script>
+<script src="scripts/lib/plugins/bootstrap-popover.js"></script>
+<script src="scripts/lib/plugins/bootstrap-button.js"></script>
+<script src="scripts/lib/plugins/bootstrap-collapse.js"></script>
+<script src="scripts/lib/plugins/bootstrap-carousel.js"></script>
+<script src="scripts/lib/plugins/bootstrap-typeahead.js"></script>
+<script src="scripts/lib/plugins/jquery.lettering-0.6.1.min.js"></script>
+<script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
+<!-- my javascript
+    ================================================== -->
+<script type="text/javascript">
+    $(function() {
+        $(".masthead h1").lettering();
+        $('a[rel=tooltip]').tooltip({placement:'bottom'});
+        $('#myModal').modal('hide');
+//        $(".alert").alert();
+    });
+
+    $(function() {
+        if( $.cookie('username') ){
+            $("#login").append($.cookie('username'));
+        } else{
+            $("#login").append("用户登录");
+        }
+        $("#check").click(function(){
+            if(this.checked){
+                $.cookie('username', $("#username").val() , { path: '/', expires: 10 });
+            }else{
+                $.cookie('username', null, { path: '/' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

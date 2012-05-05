@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>主菜单 | AppFuse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
+    <!--<link rel="stylesheet" type="text/css" media="all" href="/styles/docs.css" />-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="../index.html">Mooncake</a>
+            <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="icon-user"></i> Username
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-pencil"></i> Edit Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-off"></i> Logout</a></li>
+                </ul>
+            </div>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="../index.html" rel="tooltip" title="专业的保险搜索引擎">首页</a></li>
+                    <li><a href="wiki.html" rel="tooltip" title="丰富的保险知识">保险知识</a></li>
+                    <li><a href="lifeproduct.html" rel="tooltip" title="专业的保险产品介绍" >保险产品</a></li>
+                    <li><a href="showcase.html" rel="tooltip" title="精彩案例分享">精彩案例</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="news.html" rel="tooltip" title="最新的保险新闻">保险新闻</a></li>
+                    <li><a href="aboutus.html" rel="tooltip" title="关于我们">关于我们</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="alert alert-info">
+        <a class="close" data-dismiss="alert">×</a>
+        <strong>Congratulations！</strong> You successfully login.
+    </div>
+    <div class="subnav">
+        <ul class="nav nav-tabs">
+            <li><a href="mainmenu.html"><i class="icon-home"></i> My Home </a></li>
+            <li class="active"><a href="#"><i class="icon-search"></i> Moon Search </a></li>
+            <li><a href="#"><i class="icon-star-empty"></i> My Favorite </a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> Profile <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-pencil"></i> Edit Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-lock"></i> Change Password</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> Settings <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-home"></i> Nav, tabs, pills</a></li>
+                    <li><a href="#"><i class="icon-home"></i> Navbar</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="icon-flag"></i> Help </a></li>
+        </ul>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="span8">
+            <h2>Search for yourself</h2>
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Basic imformation <small>(your registered information)</small></legend>
+                    <div class="control-group">
+                        <label class="control-label" for="optionsRadios11">Your gender :</label>
+                        <div class="controls">
+                            <label class="radio inline">
+                                <input type="radio" name="optionsRadios11" id="optionsRadios1" value="option1" disabled checked>
+                                male
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="optionsRadios11" id="optionsRadios2" value="option2" disabled>
+                                female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Your birthday :</label>
+                        <div class="controls">
+                            <span class="input uneditable-input">1978-08-24</span>
+                            <p class="help-inline">Format:YYYY-MM-DD</p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="select01">I apply to :</label>
+                        <div class="controls">
+                            <select id="select01">
+                                <option>保障类寿险</option>
+                                <option>意外险</option>
+                                <option>健康医疗保险 </option>
+                                <option>养老保险 </option>
+                                <option>少儿保险</option>
+                                <option>女性保险</option>
+                                <option>投资理财保险 </option>
+                                <option>旅游&签证保险 </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inlineCheckboxes">Insurance company :</label>
+                        <div class="controls">
+                            <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> chinalife
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> PICC
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> pingan
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="accordion-heading">
+                        <a data-toggle="collapse" href="#collapse-advanced">Advanced imformation<small>(coming soon)</small></a>
+                    </legend>
+                    <div id="collapse-advanced" class="accordion-body collapse">
+                        <div class="control-group">
+                            <label class="control-label" for="inlineCheckboxes1">Your career :</label>
+                            <div class="controls">
+                                <label class="checkbox inline">
+                                    <input type="checkbox" id="inlineCheckbox11" value="option1"> 1
+                                </label>
+                                <label class="checkbox inline">
+                                    <input type="checkbox" id="inlineCheckbox12" value="option2"> 2
+                                </label>
+                                <label class="checkbox inline">
+                                    <input type="checkbox" id="inlineCheckbox13" value="option3"> 3
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Your income</label>
+                            <div class="controls">
+                                <label class="radio inline">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios11" value="option1" checked>
+                                    0&mdash;1000
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios12" value="option2">
+                                    1000&mdash;10000
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="span4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+    </div>
+    <hr>
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <p>&copy; Company 2012</p>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+</footer>
+
+</div><!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<script type="text/javascript" src="/scripts/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/scripts/lib/bootstrap.js"></script>
+<script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
+<script type="text/javascript" src="/scripts/script.js"></script>
+<script type="text/javascript" src="/scripts/application.js"></script>
+
+</body>
+</html>
