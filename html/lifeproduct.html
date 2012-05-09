@@ -31,17 +31,10 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="#">Mooncake</a>
-            <div class="btn-group pull-right">
-                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="icon-user"></i> Username
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Profile</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Sign Out</a></li>
-                </ul>
-            </div>
+            <ul id="login" class="nav pull-right">
+                <li class="divider-vertical"></li>
+                <li><a href="/mainMenu">登录</a></li>
+            </ul>
             <div class="nav-collapse">
                 <ul class="nav">
                     <li><a href="../index.html" rel="tooltip" title="专业的保险搜索引擎">首页</a></li>
@@ -55,10 +48,6 @@
                 <form class="navbar-search pull-left" action="">
                     <input type="text" class="search-query span2" placeholder="Search..." data-provide="typeahead" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
                 </form>
-                <ul class="nav pull-right">
-                    <li class="divider-vertical"></li>
-                    <li class=""><a href="/login">用户登录</a></li>
-                </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
@@ -204,11 +193,15 @@
 <script src="../scripts/lib/plugins/bootstrap-collapse.js"></script>
 <script src="../scripts/lib/plugins/bootstrap-carousel.js"></script>
 <script src="../scripts/lib/plugins/bootstrap-typeahead.js"></script>
+<script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
 <!-- my javascript
     ================================================== -->
 <script type="text/javascript">
     $(function() {
         $('a[rel=tooltip]').tooltip({placement:'bottom'});
+        if( $.cookie('username') ){
+            $('#login a').empty().append($.cookie('username'));
+        };
     });
 </script>
 

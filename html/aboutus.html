@@ -31,6 +31,10 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="/">Mooncake</a>
+            <ul id="login" class="nav pull-right">
+                <li class="divider-vertical"></li>
+                <li><a href="/mainMenu">登录</a></li>
+            </ul>
             <div class="nav-collapse">
                 <ul class="nav">
                     <li><a href="../index.html" rel="tooltip" title="专业的保险搜索引擎">首页</a></li>
@@ -41,7 +45,6 @@
                     <li><a href="news.html" rel="tooltip" title="最新的保险新闻">保险新闻</a></li>
                     <li class="active"><a href="aboutus.html" rel="tooltip" title="关于我们">关于我们</a></li>
                 </ul>
-                <p class="navbar-text pull-right">Logged in as <a href="mainmenu.html">username</a></p>
             </div><!--/.nav-collapse -->
         </div>
     </div>
@@ -70,6 +73,17 @@
 <script src="../scripts/lib/plugins/bootstrap-collapse.js"></script>
 <script src="../scripts/lib/plugins/bootstrap-carousel.js"></script>
 <script src="../scripts/lib/plugins/bootstrap-typeahead.js"></script>
+<script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
+<!-- my javascript
+    ================================================== -->
+<script type="text/javascript">
+    $(function() {
+        $('a[rel=tooltip]').tooltip({placement:'bottom'});
+        if( $.cookie('username') ){
+            $('#login a').empty().append($.cookie('username'));
+        };
+    });
+</script>
 
 </body>
 </html>

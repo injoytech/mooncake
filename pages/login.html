@@ -1,44 +1,43 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<head lang="en">
     <meta http-equiv="Cache-Control" content="no-store"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/favicon.ico"/>
-    <title>登录 | AppFuse</title>
-
+    <link rel="icon" href="/ico/favicon.ico"/>
+    <title>登录 | Moonlight</title>
     <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/styles/lib/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/styles/style.css" />
     <meta name="heading" content="登录"/>
     <meta name="menu" content="Login"/>
 </head>
-<body class="login">
 
+<body class="login">
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="/">AppFuse</a>
-
-            <ul class="nav">
-
-                <li class="active">
-                    <a href="/login">登录</a>
-                </li>
-
-            </ul>
+        <div class="container">
+            <a class="brand" href="/">Moonlight</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="/login">登录</a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
 
             <div id="switchLocale"><a href="/?locale=en">
-                AppFuse in English</a>
+                Moonlight in English</a>
             </div>
 
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container">
 
-    <div class="row-fluid">
+    <div class="row">
         <div class="span5">
             <form method="post" id="loginForm" action="/j_security_check"
                   onsubmit="saveUsername(this);return validateForm(this)" class="form-horizontal">
@@ -78,6 +77,7 @@
                 <fieldset class="form-actions">
                     <input type="submit" class="btn btn-primary" name="login" value="登录"
                            tabindex="4"/>
+                    <a class="btn" href="/">取消</a>
                 </fieldset>
             </form>
 
@@ -91,16 +91,17 @@
             <p>忘记了密码?  让系统将 <a href="?" onmouseover="window.status='系统发送密码提示。'; return true" onmouseout="window.status=''; return true" title="系统发送密码提示。" onclick="passwordHint(); return false">密码提示信息已e-mail形式发送给您</a>。</p>
         </div>
     </div>
-</div>
 
-<div id="footer">
-        <span class="left">Version 1.0-SNAPSHOT
-        </span>
-        <span class="right">
-            &copy; 2012 <a href="http://raibledesigns.com">Your Company Here</a>
-        </span>
-</div>
+    <!-- Footer
+     ================================================== -->
+    <hr>
+    <footer class="footer">
+        <p>&copy; 2012 <a href="http://raibledesigns.com">Your Company Here</a>
 
+        </p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+    </footer>
+</div>
 <script type="text/javascript" src="/scripts/lib/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/scripts/lib/bootstrap.js"></script>
 <script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>

@@ -48,6 +48,10 @@
                 <span class="icon-bar"></span>
             </a>
             <a id="brand" class="brand" href="./index.html">Mooncake</a>
+            <ul id="login" class="nav pull-right">
+                <li class="divider-vertical"></li>
+                <li><a href="/mainMenu">登录</a></li>
+            </ul>
             <div class="nav-collapse">
                 <ul class="nav">
                     <li class="active"><a href="index.html" rel="tooltip" title="专业的保险搜索引擎">首页</a></li>
@@ -57,10 +61,6 @@
                     <li class="divider-vertical"></li>
                     <li><a href="html/news.html" rel="tooltip" title="最新的保险新闻">保险新闻</a></li>
                     <li><a href="html/aboutus.html" rel="tooltip" title="关于我们">关于我们</a></li>
-                </ul>
-                <ul class="nav pull-right">
-                    <li class="divider-vertical"></li>
-                    <li class=""><a href="/login" id="login"></a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -121,8 +121,9 @@
 </div>
 
 <div class="container">
-    <!--<input type="text" name="username" id="username"/> <br/>-->
-    <!--<input type="checkbox" name="check" id="check"/>记住用户名-->
+    <input type="text" name="username" id="username"/> <br/>
+	<input type="checkbox" name="check" id="check"/>记住用户名
+    
     <!-- Masthead
    ================================================== -->
     <header class="jumbotron masthead">
@@ -199,28 +200,26 @@
 <script src="scripts/lib/plugins/bootstrap-typeahead.js"></script>
 <script src="scripts/lib/plugins/jquery.lettering-0.6.1.min.js"></script>
 <script type="text/javascript" src="/scripts/lib/plugins/jquery.cookie.js"></script>
+
 <!-- my javascript
     ================================================== -->
 <script type="text/javascript">
     $(function() {
-        $(".masthead h1").lettering();
+        $('.masthead h1').lettering();
         $('a[rel=tooltip]').tooltip({placement:'bottom'});
         $('#myModal').modal('hide');
-//        $(".alert").alert();
-    });
-
-    $(function() {
-        if( $.cookie('username') ){
-            $("#login").append($.cookie('username'));
-        } else{
-            $("#login").append("用户登录");
-        }
-        $("#check").click(function(){
-            if(this.checked){
-                $.cookie('username', $("#username").val() , { path: '/', expires: 10 });
+        
+		if( $.cookie('username') ){
+            $('#login a').empty().append($.cookie('username'));
+        };
+		
+        $('#check').click(function(){
+            if(this.checked && $('#username').val().length > 0 ){
+                $.cookie('username', $('#username').val() , { path: '/', expires: 10 });
             }else{
                 $.cookie('username', null, { path: '/' });
             }
+            alert($.cookie('username'));
         });
     });
 </script>
